@@ -35,11 +35,12 @@ li {
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
-  width: 65%;
+  width: 100%;
 }
 
 #content img {
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   border-radius: 5px;
   display: block;
   margin-bottom: 20px;
@@ -70,15 +71,14 @@ li {
 }
 
 #screenshots {
+  margin: 0 auto;
   margin-top: 40px;
-  padding: 30px solid red;
   text-align: center;
+  width: 90%;
 }
 
 .screenshot {
   float: left;
-margin-right: 1%;
-margin-left: 1%;
 }
 
 #footer {
