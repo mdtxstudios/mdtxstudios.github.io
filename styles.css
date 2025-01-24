@@ -3,15 +3,36 @@
 
 /* load the font files */
 @font-face {
-  font-family: "manrope";
-  src: url("/fonts/manrope-regular.otf") format("opentype");
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue.ttc") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "octopus game";
-  src: url("/fonts/OctopusGame-RpWV3.ttf") format("truetype");
+  font-family: "silom";
+  src: url("/fonts/Silom.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade";
+  src: url("/fonts/superbrigade.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade Halftone";
+  src: url("/fonts/superbrigadehalf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade Rotalic";
+  src: url("/fonts/superbrigaderotal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
