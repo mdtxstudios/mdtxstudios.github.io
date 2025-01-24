@@ -1,0 +1,622 @@
+@import url("//fonts.googleapis.com/css?family=Roboto:500");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+/* load the font files */
+@font-face {
+  font-family: "manrope";
+  src: url("/fonts/manrope-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "octopus game";
+  src: url("/fonts/OctopusGame-RpWV3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: clamp(0.3em, 0.5svw + 0.4em, 1.125em);
+
+  /* site theme */
+  --black: hsl(0deg 0% 0%);
+  --dark-gray: hsl(40deg 10% 11%);
+  --gray: hsl(0deg 0% 90%);
+  --white: hsl(0deg 0% 100%);
+  --orange: hsl(24deg 100% 59%);
+}
+
+body,
+html {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+}
+
+/* --------------- Header --------------- */
+
+header {
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+}
+
+.studio-logo {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin-inline-start: auto;
+  padding-inline-start: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: flex;
+  gap: 3rem;
+  max-height: max-content;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-family: "silom";
+  /* font-weight: 100; */
+  color: var(--white);
+  text-decoration: none;
+  padding-block: 0.3em;
+  padding-inline: 0.6em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+.hero {
+  background-image: url("image/city-landscape.png"),
+    linear-gradient(
+      180deg,
+      rgba(189, 64, 40, 1) 0%,
+      rgba(224, 78, 49, 1) 14.285%,
+      rgba(236, 119, 52, 1) 28.57%,
+      rgba(229, 165, 44, 1) 42.855%,
+      rgba(218, 192, 154, 1) 57.14%,
+      rgba(122, 194, 170, 1) 71.425%,
+      rgba(30, 155, 142, 1) 85.71%,
+      rgba(39, 114, 135, 1) 100%
+    );
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero .group {
+  text-align: center;
+  text-shadow: 2px 2px 4px gray;
+}
+
+.studio-name p:nth-of-type(1) {
+  font-size: 5rem;
+  font-family: "Super Brigade";
+}
+
+.studio-name p:nth-of-type(2) {
+  font-size: 8rem;
+  font-family: "Super Brigade Halftone";
+  margin-block-start: -15px;
+}
+
+.studio-slogan {
+  font-size: 1.2rem;
+  font-family: "Super Brigade Rotalic";
+  margin-block-start: 50px;
+  letter-spacing: 1px;
+}
+
+/* ------------ About section ------------ */
+
+.about-studio {
+  background-color: var(--dark-gray);
+  padding-block-start: 5rem;
+  padding-block-end: 10rem;
+  text-align: center;
+}
+
+.about-studio h2 {
+  font-size: 3rem;
+  font-family: "silom";
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.about-studio p {
+  font-size: 2.3rem;
+  font-family: "Helvetica Neue";
+  margin-block-start: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* ------------ TransitGame section ------------ */
+.game-transit-hop {
+  background-color: var(--white);
+  padding-block: 10rem;
+  padding-inline: 3rem;
+  text-align: center;
+  color: var(--black);
+}
+
+.game-transit-hop-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.game-image {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.game-image img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.game-description {
+  text-align: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.game-description h2 {
+  font-family: "silom";
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.game-description p {
+  font-size: 2.3rem;
+  font-family: "Helvetica Neue";
+  margin-block-start: 2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.game-description .read-more {
+  display: block;
+  font-family: "silom";
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-block-start: 3rem;
+  margin-inline: auto;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  width: fit-content;
+  border-radius: 2em;
+  padding-block: 0.6em;
+  padding-inline: 0.8em;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease,
+    border 0.15s ease, color 0.15s ease;
+}
+
+.game-description .read-more:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  box-shadow: 0px 0px 0px 5px var(--orange);
+}
+
+.play-store-download {
+  margin-inline: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  background-color: var(--black);
+  width: fit-content;
+  margin-block-start: 3rem;
+  border-radius: 0.5em;
+}
+
+.play-store-download img {
+  width: 20em;
+  height: auto;
+}
+
+.face-button {
+  height: 3em;
+  display: inline-block;
+  border: 2px solid var(--orange);
+  font-family: "silom";
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--orange);
+  overflow: hidden;
+  margin-block-start: 3rem;
+  border-radius: 0.5em;
+}
+.face-button .icon {
+  margin-right: 6px;
+}
+.face-button .face-primary,
+.face-button .face-secondary {
+  display: block;
+  padding-inline: 0.8em;
+  line-height: 3em;
+  transition: margin 0.3s;
+}
+.face-button .face-primary {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.face-button:hover .face-primary {
+  margin-top: -3em;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .game-transit-hop-group {
+    flex-direction: row;
+  }
+
+  .game-image {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .game-image img {
+    border-radius: 15%;
+  }
+
+  .game-description {
+    flex-basis: 0;
+    flex-grow: 2;
+    text-align: left;
+  }
+
+  .game-description .read-more {
+    margin-inline: unset;
+  }
+
+  .play-store-download {
+    margin-inline: unset;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+}
+
+/* ---------------- Dev Team ----------------- */
+
+.dev-team {
+  background-color: var(--gray);
+  padding-block-start: 10rem;
+  padding-block-end: 25%;
+  text-align: center;
+  color: var(--black);
+  background-image: url("image/city-landscape.png");
+  justify-content: center;
+  align-items: center;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dev-team h2 {
+  font-family: "silom";
+  font-size: 3rem;
+  margin-block-end: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.team-member-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-block-start: 2rem;
+  text-align: center;
+}
+
+.team-member-group .team-member:nth-of-type(2) {
+  margin-block-start: 5rem;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .team-member-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .team-member-group .team-member:nth-of-type(2) {
+    margin-block-start: 2rem;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+}
+
+.member-image {
+  width: 50%;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+}
+
+.role {
+  font-size: 2rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  margin-block-start: 1.5em;
+}
+
+.role h3 {
+  font-weight: 400;
+}
+
+.role p {
+  font-weight: 300;
+  margin-block-start: 8px;
+}
+
+/* ------------ Footer section ------------ */
+
+.footer {
+  background-color: var(--dark-gray);
+  padding-block-start: 10rem;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 5rem;
+  padding-inline: 3rem;
+}
+
+.contact-us {
+  margin-block-start: 2rem;
+}
+
+.social {
+  margin-block-start: 5rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 4em;
+  margin-top: 2em;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .footer-group {
+    flex-direction: row;
+  }
+
+  .contact-us {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    max-width: fit-content;
+  }
+
+  .social {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    max-width: fit-content;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline: auto;
+    gap: 4em;
+    max-width: max-content;
+    margin-top: 2em;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+  .footer-group {
+  }
+
+  .contact-us {
+  }
+
+  .social {
+  }
+
+  .social-buttons {
+  }
+}
+
+.contact-us h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "silom";
+  font-size: 3rem;
+  margin-block-end: 1em;
+  letter-spacing: 1.5px;
+}
+
+.contact-us a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 2px;
+  font-weight: 200;
+  transition: color 0.3s ease;
+}
+
+.contact-us a:hover {
+  color: var(--orange);
+}
+
+.mail img {
+  height: 1.2em;
+  margin-inline-end: 1em;
+}
+
+.contact-us p {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-block-start: 1.8rem;
+  display: inline-block;
+}
+
+.location img {
+  height: 1.7em;
+  margin-inline-end: 1em;
+}
+
+.social h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "silom";
+  font-size: 3rem;
+  margin-block-end: 1em;
+  letter-spacing: 1.5px;
+}
+
+.social-buttons a {
+  border-radius: 5px;
+  width: 5em;
+  height: 5em;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  transition: all 0.3s ease;
+  background-color: var(--black);
+  background-size: 1em auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.social-buttons a:hover {
+  background-color: var(--orange);
+}
+
+.facebook {
+  background-image: url("image/facebook-icon.png");
+  transition: background-image 6s ease;
+}
+
+.facebook:hover {
+  background-image: url("image/facebook-icon-white.png");
+}
+
+.social-buttons .x {
+  background-size: 1.5em auto;
+  background-image: url("image/x-icon.png");
+}
+
+.x:hover {
+  background-image: url("image/x-icon-white.png");
+}
+
+.social-buttons .youtube {
+  background-size: 2em auto;
+  background-image: url("image/youtube-icon.png");
+}
+
+.youtube:hover {
+  background-image: url("image/youtube-icon-white.png");
+}
+
+.policy {
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.policy a {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  margin-inline-start: 1em;
+  transition: color 0.3s ease;
+}
+
+.policy a:hover {
+  color: var(--orange);
+}
+
+.copyright {
+  background-color: var(--black);
+  padding-block: 1rem;
+  font-size: 1rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+}

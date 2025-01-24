@@ -1,54 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Mediatrix Studios</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Game Studio website">
-  <meta name="keywords" content="gaming, 2d game, transit hop, play">
-  <meta name="author" content="Mediatrix Studios">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-  <!-- <link rel="icon" href="path-to-your-favicon.png" type="image/png">
-
-
-  <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
-  <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
-  <link rel="icon" sizes="48x48" href="favicon-48x48.png" type="image/png"> -->
-
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div id="wrap">
-    <div id="warning">
-      <img src="images/underconstruction.png" />
-    </div>
-    <div id="content">
-      <img src="images/featuregraphic.png" />
-
-      <a href="apk-phone.apk" download class="download-button">PHONE DOWNLOAD </a>
-      <a href="apk-phone.apk" download class="download-button">TABLET DOWNLOAD</a>
-      <div id="screenshots"> 
-        <img src="images/shot1.png" class="screenshot"  style="width: 32%;"/>
-        <img src="images/shot2.png" class="screenshot" style="width: 32%; margin-left: 2%;margin-right: 2%;"/>
-        <img src="images/shot3.png" class="screenshot"style="width: 32%;" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediatrix Studios</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="home"></div>
+    <header>
+      <div class="studio-logo">
+        <img src="/image/studio-logo.png" alt="" class="studio-logo" />
       </div>
 
-    </div>
-    <div id="footer">
-      <p>Copyright &copy; Mediatrix Studios</p>
-    </div>
-  </div>
-</body>
+      <nav>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#games">games</a></li>
+          <li><a href="#team">team</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="group">
+          <div class="studio-name">
+            <p>Mediatrix</p>
+            <p>Studios</p>
+          </div>
+          <p class="studio-slogan">engage the mind with your fingers!</p>
+        </div>
+      </section>
+      <section class="about-studio">
+        <h2>About Studio</h2>
+        <p>
+          Mediatrix Studios is an indie game studio, <br />
+          creating original interactive game products. <br />
+          we are based in Nigeria. <br />
+          Let the fun begin!
+        </p>
+      </section>
+      <section class="game-transit-hop" id="games">
+        <div class="game-transit-hop-group">
+          <div class="game-image">
+            <img src="image/game-icon.png" alt="" />
+          </div>
+          <div class="game-description">
+            <h2>Transit Hop</h2>
+            <p>
+              Flex your reflex in the ray transit system of a futuristic world,
+              with a craft which can hop between tracks at a finger's snap.
+            </p>
+            <a class="read-more" href="">Read More</a>
+            <!-- <a href="" class="play-store-download">
+              <img src="image/play-store-download.png" alt="" />
+            </a> -->
 
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon fa fa-cloud"></span>
+                Download
+              </div>
+
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: 64 MB
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="dev-team" id="team">
+        <h2>Dev Team</h2>
+        <div class="team-member-group">
+          <figure class="team-member">
+            <div class="member-image">
+              <img src="image/avatar-1.png" alt="" />
+            </div>
+
+            <figcaption class="role">
+              <h3>Tech Lead</h3>
+              <p>Inibehe</p>
+            </figcaption>
+          </figure>
+
+          <figure class="team-member">
+            <div class="member-image">
+              <img src="image/avatar-2.png" alt="" />
+            </div>
+            <figcaption class="role">
+              <h3>Programmer</h3>
+              <p>Andikan</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-group">
+        <section class="contact-us" id="contact">
+          <h2>contact us</h2>
+          <div class="mail">
+            <img src="image/mail-icon.png" alt="" />
+            <a href="mailto:mediatrix.studios@gmail.com"
+              >mediatrix.studios@gmail.com</a
+            >
+          </div>
+          <div class="location">
+            <img src="image/location-icon.png" alt="" />
+            <p>Akwa Ibom, Nigeria</p>
+          </div>
+        </section>
+        <section class="social">
+          <h2>Social</h2>
+          <div class="social-buttons">
+            <a href="" class="facebook"> </a>
+            <a href="" class="x"> </a>
+            <a href="" class="youtube"> </a>
+          </div>
+        </section>
+      </div>
+
+      <section class="policy">
+        <a href="">Privacy Policy</a>
+        <a href="">EULA</a>
+      </section>
+      <section class="copyright">
+        <p>Copyright &commat; Mediatrix Studios 2025</p>
+      </section>
+    </footer>
+  </body>
 </html>
