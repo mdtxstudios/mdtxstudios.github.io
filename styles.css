@@ -95,7 +95,7 @@ nav > ul {
   list-style-type: none;
   padding-inline-start: 0;
   display: flex;
-  gap: 3rem;
+  gap: 0.8rem;
   max-height: max-content;
 }
 
@@ -105,7 +105,7 @@ nav li {
 
 nav a {
   text-transform: capitalize;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: "silom";
   /* font-weight: 100; */
   color: var(--white);
@@ -113,6 +113,21 @@ nav a {
   padding-block: 0.3em;
   padding-inline: 0.6em;
   transition: color 0.3s ease;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  nav > ul {
+    gap: 3rem;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
 }
 
 nav a:hover {
@@ -147,21 +162,42 @@ nav a:hover {
 }
 
 .studio-name p:nth-of-type(1) {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Super Brigade";
 }
 
 .studio-name p:nth-of-type(2) {
-  font-size: 8rem;
+  font-size: 5rem;
   font-family: "Super Brigade Halftone";
-  margin-block-start: -15px;
+  margin-block-start: -9px;
 }
 
 .studio-slogan {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-family: "Super Brigade Rotalic";
-  margin-block-start: 50px;
+  margin-block-start: 30px;
   letter-spacing: 1px;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .studio-name p:nth-of-type(1) {
+    font-size: 5rem;
+  }
+
+  .studio-name p:nth-of-type(2) {
+    font-size: 8rem;
+    margin-block-start: -15px;
+  }
+
+  .studio-slogan {
+    font-size: 1.2rem;
+    margin-block-start: 50px;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
 }
 
 /* ------------ About section ------------ */
@@ -181,12 +217,23 @@ nav a:hover {
 }
 
 .about-studio p {
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   font-family: "Helvetica Neue";
   margin-block-start: 2rem;
   letter-spacing: 1px;
   line-height: 1.5;
   font-weight: 300;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .about-studio p {
+    font-size: 2.3rem;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
 }
 
 /* ------------ TransitGame section ------------ */
@@ -228,7 +275,7 @@ nav a:hover {
 }
 
 .game-description p {
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   font-family: "Helvetica Neue";
   margin-block-start: 2rem;
   letter-spacing: 1px;
@@ -327,6 +374,10 @@ nav a:hover {
     flex-basis: 0;
     flex-grow: 2;
     text-align: left;
+  }
+
+  .game-description p {
+    font-size: 2.3rem;
   }
 
   .game-description .read-more {
