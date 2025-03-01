@@ -1,0 +1,641 @@
+@import url("//fonts.googleapis.com/css?family=Roboto:500");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+/* load the font files */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "silom";
+  src: url("/fonts/Silom.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade";
+  src: url("/fonts/superbrigade.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade Halftone";
+  src: url("/fonts/superbrigadehalf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Super Brigade Rotalic";
+  src: url("/fonts/superbrigaderotal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: clamp(0.3em, 0.5svw + 0.4em, 1.125em);
+
+  /* site theme */
+  --black: hsl(0deg 0% 0%);
+  --dark-gray: hsl(40deg 10% 11%);
+  --gray: hsl(0deg 0% 90%);
+  --white: hsl(0deg 0% 100%);
+  --orange: hsl(24deg 100% 59%);
+}
+
+body,
+html {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+}
+
+/* --------------- Header --------------- */
+
+header {
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+}
+
+.studio-logo {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin-inline-start: auto;
+  padding-inline-start: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: flex;
+  gap: 0.8rem;
+  max-height: max-content;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-family: "silom";
+  /* font-weight: 100; */
+  color: var(--white);
+  text-decoration: none;
+  padding-block: 0.3em;
+  padding-inline: 0.6em;
+  transition: color 0.3s ease;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  nav > ul {
+    gap: 3rem;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+/* ------------ Hero section ------------ */
+
+.hero {
+  background-image: linear-gradient(
+    180deg,
+    rgba(189, 64, 40, 1) 0%,
+    rgba(224, 78, 49, 1) 14.285%,
+    rgba(236, 119, 52, 1) 28.57%,
+    rgba(229, 165, 44, 1) 42.855%,
+    rgba(218, 192, 154, 1) 57.14%,
+    rgba(122, 194, 170, 1) 71.425%,
+    rgba(30, 155, 142, 1) 85.71%,
+    rgba(39, 114, 135, 1) 100%
+  );
+  padding-block: 5rem;
+  padding-inline: 5rem;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.name-group {
+  margin-inline: auto;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.game-name {
+  font-family: "Silom";
+  font-size: 9vw;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: var(--black);
+}
+
+.game-slogan {
+  font-family: "Helvetica Neue";
+  font-size: 3vw;
+  text-transform: capitalize;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.game-image {
+  margin-inline: auto;
+  width: 70%;
+  /* background-color: red; */
+  margin-block: 5em;
+}
+
+.game-image img {
+  width: 100%;
+}
+
+.download-buttons {
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  /* background-color: red; */
+}
+
+.download-buttons a {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-buttons a img {
+  width: 100%;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .hero {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .name-group {
+    float: left;
+    width: 60%;
+    text-align: left;
+  }
+
+  .game-name {
+    font-size: 7vw;
+  }
+
+  .game-slogan {
+    font-size: 2vw;
+  }
+
+  .game-image {
+    float: right;
+    width: 40%;
+    margin-block: 0;
+    padding-block-start: 20px;
+  }
+
+  .game-image img {
+    width: 100%;
+  }
+
+  .hero .download-buttons {
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+    float: left;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+  }
+
+  .download-buttons a {
+    width: 35%;
+  }
+}
+
+/* ------------ About section ------------ */
+.about-game {
+  background-color: var(--white);
+  padding-block: 5rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.about-game .flag {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.flag img {
+  width: 20%;
+}
+
+.about-game h2 {
+  font-family: "Silom";
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-block: 3rem;
+}
+
+.about-game .game-description {
+  width: 90%;
+  margin-inline: auto;
+  font-size: 1.8rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+}
+
+/* ------------ Game Info section ------------ */
+.game-info {
+  background-color: var(--white);
+  padding-block: 5rem;
+  color: var(--black);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* background-color: wheat; */
+}
+
+.info .image {
+  width: 40%;
+  background-color: var(--gray);
+  border-radius: 50%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info .image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+}
+
+.info .description {
+  width: 90%;
+}
+
+.game-info .description h3 {
+  color: var(--orange);
+  font-family: "Helvetica Neue";
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-block-end: 1rem;
+}
+
+.game-info .description p {
+  font-family: "Helvetica Neue";
+  font-size: 1.8rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-inline: auto;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .info {
+    flex-direction: row;
+    margin-inline: 5rem;
+  }
+
+  .game-info > .info:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .info .description {
+    text-align: left;
+    align-self: center;
+  }
+  .game-info > .info:nth-child(odd) .description {
+    padding-inline-end: 3rem;
+  }
+
+  .game-info > .info:nth-child(even) .description {
+    padding-inline-start: 3rem;
+  }
+
+  .info .image {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .info .description {
+    flex-basis: 0;
+    flex-grow: 3;
+  }
+}
+
+/* ---------------- Game Download ----------------- */
+
+.game-download {
+  background-color: var(--gray);
+  padding-block-start: 10rem;
+  padding-block-end: 25%;
+  color: var(--black);
+  background-image: url("image/city-landscape.png");
+  /* justify-content: center; */
+  align-items: center;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-inline: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.game-download h2 {
+  font-family: "Silom";
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.game-download p {
+  font-size: 2rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.game-download h3 {
+  font-family: "Helvetica Neue";
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 601px) {
+  .download-buttons {
+    width: 70%;
+  }
+}
+
+/* ------------ Footer section ------------ */
+
+.footer {
+  background-color: var(--dark-gray);
+  padding-block-start: 10rem;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 5rem;
+  padding-inline: 3rem;
+}
+
+.contact-us {
+  margin-block-start: 2rem;
+}
+
+.social {
+  margin-block-start: 5rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 4em;
+  margin-top: 2em;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+  .footer-group {
+    flex-direction: row;
+  }
+
+  .contact-us {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    max-width: fit-content;
+  }
+
+  .social {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    max-width: fit-content;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline: auto;
+    gap: 4em;
+    max-width: max-content;
+    margin-top: 2em;
+  }
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+  .footer-group {
+  }
+
+  .contact-us {
+  }
+
+  .social {
+  }
+
+  .social-buttons {
+  }
+}
+
+.contact-us h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "silom";
+  font-size: 3rem;
+  margin-block-end: 1em;
+  letter-spacing: 1.5px;
+}
+
+.contact-us a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 2px;
+  font-weight: 200;
+  transition: color 0.3s ease;
+}
+
+.contact-us a:hover {
+  color: var(--orange);
+}
+
+.mail img {
+  height: 1.2em;
+  margin-inline-end: 1em;
+}
+
+.contact-us p {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-block-start: 1.8rem;
+  display: inline-block;
+}
+
+.location img {
+  height: 1.7em;
+  margin-inline-end: 1em;
+}
+
+.social h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "silom";
+  font-size: 3rem;
+  margin-block-end: 1em;
+  letter-spacing: 1.5px;
+}
+
+.social-buttons a {
+  border-radius: 5px;
+  width: 5em;
+  height: 5em;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  transition: all 0.3s ease;
+  background-color: var(--black);
+  background-size: 1em auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.social-buttons a:hover {
+  background-color: var(--orange);
+}
+
+.facebook {
+  background-image: url("image/facebook-icon.png");
+  transition: background-image 6s ease;
+}
+
+.facebook:hover {
+  background-image: url("image/facebook-icon-white.png");
+}
+
+.social-buttons .x {
+  background-size: 1.5em auto;
+  background-image: url("image/x-icon.png");
+}
+
+.x:hover {
+  background-image: url("image/x-icon-white.png");
+}
+
+.social-buttons .youtube {
+  background-size: 2em auto;
+  background-image: url("image/youtube-icon.png");
+}
+
+.youtube:hover {
+  background-image: url("image/youtube-icon-white.png");
+}
+
+.policy {
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.policy a {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  margin-inline-start: 1em;
+  transition: color 0.3s ease;
+}
+
+.policy a:hover {
+  color: var(--orange);
+}
+
+.copyright {
+  background-color: var(--black);
+  padding-block: 1rem;
+  font-size: 1rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* Tablet (Medium screens like iPads) */
+@media (min-width: 601px) {
+}
+
+/* Desktop (Large screens like laptops and monitors) */
+@media (min-width: 1025px) {
+}
