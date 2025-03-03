@@ -56,6 +56,10 @@
   --orange: hsl(24deg 100% 59%);
 }
 
+.stack > * + * {
+  margin-block-start: 3em;
+}
+
 body,
 html {
   background-color: var(--black);
@@ -293,12 +297,12 @@ nav a:hover {
 /* ------------ Game Info section ------------ */
 .game-info {
   background-color: var(--white);
-  padding-block: 5rem;
+  /* padding-block: 5rem; */
   color: var(--black);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  /* gap: 6rem; */
 }
 
 .info {
@@ -307,8 +311,16 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  /* background-color: wheat; */
+
+  padding-block: 5rem;
 }
+.game-info > :nth-child(odd) {
+  /* background-color: rgb(236, 233, 227); */
+  background-color: hsl(0deg 0% 98%);
+}
+/* .game-info > .info + .info {
+  padding-block-start: 3em;
+} */
 
 .info .image {
   width: 40%;
@@ -352,7 +364,7 @@ nav a:hover {
 @media (min-width: 601px) {
   .info {
     flex-direction: row;
-    margin-inline: 5rem;
+    padding-inline: 5rem;
   }
 
   .game-info > .info:nth-child(odd) {
@@ -385,7 +397,7 @@ nav a:hover {
 
 .game-download {
   background-color: var(--gray);
-  padding-block-start: 10rem;
+  padding-block-start: 6rem;
   padding-block-end: 25%;
   color: var(--black);
   background-image: url("image/city-landscape.png");
